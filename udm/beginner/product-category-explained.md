@@ -92,9 +92,17 @@ Association of products with "CATALOG_SEARCH" category
 * Set the Product Category Members.
 
 ### View Allow Category
-**Purpose:** View Allow is optional and special purpose category for a catalog. If View Allow Category exists for a catalog, then all the products are required to be associated with this category to be visible on front store.
-**Description:** Benefit of using View Allow Category is that you only need to maintain one relationship i.e; associate the categories directly with View Allow Category for web visibility, rather than associating every product to it separately. The prod catalog category type will be PCCT_VIEW_ALLOW for this category.  It has no association with Browse Root.
-**Category Type:** CATALOG_CATEGORY
+**Purpose:** 
+* View Allow is optional and special purpose category for a catalog. 
+* If View Allow Category exists for a catalog, then all the products are required to be associated with this category to be visible on front store.
+
+**Description:** 
+* Benefit of using View Allow Category is that you only need to maintain one relationship i.e. associate the categories directly with View Allow Category for web visibility, rather than associating every product to it separately.
+* The prod catalog category type will be PCCT_VIEW_ALLOW for this category.
+* It has no association with Browse Root.
+  
+**Category Type:** 
+* CATALOG_CATEGORY
 
 **API Support**
 To Do
@@ -111,14 +119,24 @@ Sample data to demonstrate association of products with "VIEW_ALLOW" category
 ```
 
 **Additional Notes**
-More than one product catalog category types can be assigned to a category.
-Best Practice: Add new category for each catalog category type.
-Best practice: Set the Product Category Members.
+
+* More than one product catalog category types can be assigned to a category.
+
+**Best Practice** 
+* Add new category for each catalog category type.
+* Set the Product Category Members.
 
 ### Purchase Allow Category
-**Purpose:** Purchase Allow also is an optional and special purpose category for a catalog. Only the products associated to Purchase Allow Category will be available for purchase from store front in the situation if this category exists.
-**Description:** There might be some products onsite which cannot be purchased directly and come under a package or kit. These kind of products are excluded from this category. The prod catalog category type for Purchase Allow Category will be PCCT_PURCHASE_ALLOW.
-**Category Type:** CATALOG_CATEGORY
+**Purpose:** 
+* Purchase Allow also is an optional and special purpose category for a catalog.
+* Only the products associated to Purchase Allow Category will be available for purchase from store front in the situation if this category exists.
+* 
+**Description:** 
+* There might be some products onsite which cannot be purchased directly and come under a package or kit.These kind of products are excluded from this category.
+* The prod catalog category type for Purchase Allow Category will be PCCT_PURCHASE_ALLOW.
+  
+**Category Type:** 
+* CATALOG_CATEGORY
 
 **API Support**
 To Do
@@ -136,14 +154,25 @@ Association of products with "PURCHASE_ALLOW" category
 ```
 **Additional Notes**
 
-More than one product catalog category types can be assigned to a category.
-Best Practice: Add new category for each catalog category type.
-Best Practice: Set the Product Category Members.
+*More than one product catalog category types can be assigned to a category.
+
+**Best Practice** 
+* Add new category for each catalog category type.
+* Set the Product Category Members.
 
 ### Tax Category
-Purpose: Tax Category is responsible for applying and calculating tax for all the products belonging to Tax Category. Tax Category need not be associated with Browse Root Category.
-Description: Tax Category can be treated as grouping of products on which you want to apply same tax percent rate. The advantage of this type of categorization for applying tax is that it prevents application of multiple taxes/tax percent rate on single items. Various Tax Categories can be created for a number of product groups if the tax percent applied is different for various product groups. For instance, if you have to setup tax percent for food products as 3.0% and 5.0% for water products for all orders of Utah state, you have to setup two categories for it- "FOOD_TAX_CATEGORY" and "WATER_TAX_CATEGORY". After adding the products to the categories, the categories need to be associated with the tax authority and two different tax rates (3.0% and 5.0%) will be set for them. Now when a user will purchase a product from the storefront, the tax will be calculated based on the tax rate of the category to which the product belongs.
-Category Type: TAX_CATEGORY
+
+**Purpose** 
+* Tax Category is responsible for applying and calculating tax for all the products belonging to Tax Category.
+* Tax Category need not be associated with Browse Root Category.
+  
+**Description** 
+* Tax Category can be treated as grouping of products on which you want to apply same tax percent rate.
+* The advantage of this type of categorization for applying tax is that it prevents application of multiple taxes/tax percent rate on single items.
+* Various Tax Categories can be created for a number of product groups if the tax percent applied is different for various product groups. For instance, if you have to setup tax percent for food products as 3.0% and 5.0% for water products for all orders of Utah state, you have to setup two categories for it- "FOOD_TAX_CATEGORY" and "WATER_TAX_CATEGORY". After adding the products to the categories, the categories need to be associated with the tax authority and two different tax rates (3.0% and 5.0%) will be set for them. Now when a user will purchase a product from the storefront, the tax will be calculated based on the tax rate of the category to which the product belongs.
+  
+**Category Type** 
+* TAX_CATEGORY
 
 API Support
 To Do
@@ -174,9 +203,17 @@ fromDate="2001-05-13 00:00:00.001" thruDate="" description="Tax Applicable for W
 ```
 
 ### Promotions Category
-Purpose: Promotions Category is special purpose category to promote specific type of products in specific section over the site to get the user attraction on products. For a catalog single promotion category will exist having prod catalog category type as PCCT_PROMOTIONS.
-Description: Promotions Category categorizes all the promoted products scattered over the various categories of online store into single category on e-commerce site. Promotions Category usually contain products within it, but it can also display the categories which merchandizing manager wants to promote. It is not compulsory to associate Promotions Category with Browse Root despite its product category type as CATALOG_CATEGORY.
-Category Type: CATALOG_CATEGORY
+**Purpose**
+* Promotions Category is special purpose category to promote specific type of products in specific section over the site to get the user attraction on products.
+* For a catalog single promotion category will exist having prod catalog category type as PCCT_PROMOTIONS.
+  
+**Description** 
+* Promotions Category categorizes all the promoted products scattered over the various categories of online store into single category on e-commerce site.
+* Promotions Category usually contain products within it, but it can also display the categories which merchandizing manager wants to promote.
+* It is not compulsory to associate Promotions Category with Browse Root despite its product category type as CATALOG_CATEGORY.
+  
+**Category Type** 
+* CATALOG_CATEGORY
 
 API Support
 To Do
@@ -197,17 +234,24 @@ Sample data to demonstrate association of products with PROMOTIONS category
 <ProductCategoryMember productCategoryId="PROMOTIONS" productId="9000" fromDate="2001-05-13 12:00:00.0" sequenceNum="2"/>
 ```
 
-Additional Notes
-
-Sequence number in Product Category Member and Product Category Rollup depicts the order in which the products and categories will be respectively displayed in the Promotions Category section.
-Best Practice: Set the Product Category Members if page will show the products
-Best Practice: Set Category Rollups if the page will show the categories.
-In general it is about setting the Product Category Members.
+**Additional Notes**
+* Sequence number in Product Category Member and Product Category Rollup depicts the order in which the products and categories will be respectively displayed in the Promotions Category section.
+  
+**Best Practice** 
+* Set the Product Category Members if page will show the products
+* Set Category Rollups if the page will show the categories.
+* In general it is about setting the Product Category Members.
 
 ### Most Popular Category
-Purpose: The purpose of this category is to list the most popular products available on the e-commerce site. The prod catalog category type for Most Popular Category is PCCT_MOST_POPULAR and only one category of such type exists for a catalog.
-Description: Most Popular Category usually contain products within it, but it can also hold the list of most popular categories which will in turn display the most popular products within them.
-Category Type: CATALOG_CATEGORY
+**Purpose**
+* The purpose of this category is to list the most popular products available on the e-commerce site.
+* The prod catalog category type for Most Popular Category is PCCT_MOST_POPULAR and only one category of such type exists for a catalog.
+  
+**Description** 
+* Most Popular Category usually contain products within it, but it can also hold the list of most popular categories which will in turn display the most popular products within them.
+  
+**Category Type** 
+* CATALOG_CATEGORY
 
 API Support
 To Do
@@ -228,20 +272,30 @@ Association of other categories with "MOST_POPULAR" category
 <ProductCategoryMember productCategoryId="MOST_POPULAR" productId="9001" fromDate="2001-05-13 12:00:00.0" sequenceNum="2"/>
 ```
 
-Additional Notes
+**Additional Notes**
+* Most Popular Category displays the products based on the number of hits on the product or based on the sale of a product.
+* To display the most popular categories or products, an algorithm is written which displays the products sorted by sale or hit.
+* This method is not used in Ofbiz, instead a catalog category type PCCT_MOST_POPULAR is used which give the rights to merchandizing manager to display the products in this category which are chosen keeping in mind the growth of business.
+* Sequence number in Product Category Rollup and Product Category Member depicts the order in which the categories and products will be displayed in this category.
 
-Most Popular Category displays the products based on the number of hits on the product or based on the sale of a product.
-To display the most popular categories or products, an algorithm is written which displays the products sorted by sale or hit.
-This method is not used in Ofbiz, instead a catalog category type PCCT_MOST_POPULAR is used which give the rights to merchandizing manager to display the products in this category which are chosen keeping in mind the growth of business.
-Sequence number in Product Category Rollup and Product Category Member depicts the order in which the categories and products will be displayed in this category.
-Best Practice: Set the Product Category Members if page will show the products
-Best Practice: Set Category Rollups if the page will show the categories.
-In general it is about setting the Product Category Members.
+  
+**Best Practice** 
+* Set the Product Category Members if page will show the products
+* Set Category Rollups if the page will show the categories.
+* In general it is about setting the Product Category Members.
 
 ### What's New Category
-Purpose: All the fresh arrivals in a e-commerce site are displayed under What's New Category.The prod catalog category type for this category is PCCT_WHATS_NEW. Only one category of this type exist for a catalog.
-Description: This category contains all the products that are newly added to the site as fresh products.
-Category Type: CATALOG_CATEGORY
+
+**Purpose** 
+* All the fresh arrivals in a e-commerce site are displayed under What's New Category.
+* The prod catalog category type for this category is PCCT_WHATS_NEW.
+* Only one category of this type exist for a catalog.
+ 
+**Description**
+* This category contains all the products that are newly added to the site as fresh products.
+  
+**Category Type**
+* CATALOG_CATEGORY
 
 API Support
 To Do
@@ -261,15 +315,17 @@ Association of products with "WHATS_NEW" category
 <ProductCategoryMember productCategoryId="WHATS_NEW" productId="9000" fromDate="2001-05-13 12:00:00.0" sequenceNum="1"/>
 <ProductCategoryMember productCategoryId="WHATS_NEW" productId="9001" fromDate="2001-05-13 12:00:00.0" sequenceNum="2"/>
 ```
-Additional Notes
-
-The visibility of a product will depend on the introduction date of product i.e; an algorithm could be applied to display the last 20 products added to the storefront based on their introduction date.
-Algorithms are applied to the Whats New Category which determine what product will be displayed in the category. The products to be displayed in the category are sorted on the basis of introduction date.
-In Ofbiz instead of applying some algorithm to determine what all products will be displayed in the category, the merchandising manager is given the authority to decide and manage the products present over there.
-Sequence number in Product Category Rollup and Product Category Member depicts the order in which the categories and products will be displayed on the front store respectively.
-Best Practice: Set the Product Category Members if page will show the products
-Best Practice: Set Category Rollups if the page will show the categories.
-In general it is about setting the Product Category Members.
+**Additional Notes**
+* The visibility of a product will depend on the introduction date of product i.e; an algorithm could be applied to display the last 20 products added to the storefront based on their introduction date.
+* Algorithms are applied to the Whats New Category which determine what product will be displayed in the category.
+* The products to be displayed in the category are sorted on the basis of introduction date.
+* In Ofbiz instead of applying some algorithm to determine what all products will be displayed in the category, the merchandising manager is given the authority to decide and manage the products present over there.
+* Sequence number in Product Category Rollup and Product Category Member depicts the order in which the categories and products will be displayed on the front store respectively.
+  
+**Best Practice** 
+* Set the Product Category Members if page will show the products
+* Set Category Rollups if the page will show the categories.
+* In general it is about setting the Product Category Members.
 
 
 
