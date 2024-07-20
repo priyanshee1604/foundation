@@ -57,17 +57,17 @@ Sample JSON Data
     {
       "contactMechId": "ADDR001",
       "contactMechTypeId": "POSTAL_ADDRESS",
-      "infoString": "123 Elm Street, Springfield, 12345, USA"
+      "infoString": "//it will be left blank, as the information will be store in the porstalAddress entity."
+       "PostalAddress": {
+          "contactMechId": "ADDR001",
+          "address1": "123 Elm Street",
+          "city": "Springfield",
+          "postalCode": "12345",
+          "countryGeoId": "USA"
+           }
     }
-  ],
-  "PostalAddress": {
-    "contactMechId": "ADDR001",
-    "address1": "123 Elm Street",
-    "city": "Springfield",
-    "postalCode": "12345",
-    "countryGeoId": "USA"
-  },
-  "ContactMechPurpose": [
+ ],
+  "ContactMechTypePurpose": [
     {
       "contactMechId": "ADDR001",
       "contactMechPurposeTypeId": "BILLING"
@@ -107,15 +107,14 @@ Sample JSON Data
       "contactMechId": "ADDR002",
       "contactMechTypeId": "POSTAL_ADDRESS",
       "infoString": "456 Oak Avenue, Metropolis, 54321, USA"
-    }
-  ],
-  "PostalAddress": {
-    "contactMechId": "ADDR002",
-    "address1": "456 Oak Avenue",
-    "city": "Metropolis",
-    "postalCode": "54321",
-    "countryGeoId": "USA"
-  },
+      "PostalAddress": {
+        "contactMechId": "ADDR002",
+        "address1": "456 Oak Avenue",
+        "city": "Metropolis",
+        "postalCode": "54321",
+        "countryGeoId": "USA"
+      }
+    },
   "ContactMechPurpose": [
     {
       "contactMechId": "ADDR002",
