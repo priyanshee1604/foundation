@@ -8,7 +8,7 @@ Party Data Model Overview
 
 Entities
 1. Party
-Description: Represents any entity that can enter into a relationship. This includes individuals, groups, or organizations.
+* Description: Represents an entity that can be individuals, groups, or organizations.
 * Key Attributes: Unique identifier (partyId).
 2. Person
 * Description: A specialization of Party, representing individual human beings.
@@ -20,15 +20,16 @@ Description: Represents any entity that can enter into a relationship. This incl
 * Relationship with Party: Every PartyGroup is a Party, but with attributes specific to groups.
 4. Party Roles
 * Function: Defines the role of a Party in a specific context.
+* Subtypes: Person Role, OrganiZation Role.
 * Examples: Customer, Supplier, Employee.
 * Assignment: A Party is assigned a Role through the PartyRole entity, linking the Party to its function within the business ecosystem.
-5. Contact Mechanisms and Purposes
-Adding Contact Mechanisms
-* Types: Includes phone numbers (TelecomNumber) and postal addresses (PostalAddress).
-* Linking to Party: Achieved via the ContactMech entity, which associates a contact mechanism with a Party through a unique contactMechId.
-Assigning Purposes to Contact Mechanisms
+5. Contact Mechanisms
+* Description: This entity stores the means of contacting a party
+* Types: Includes phone numbers (TelecomNumber), Electronic Address and postal addresses (PostalAddress).
+* Linking to Party: Achieved via the partyContactMech entity, which associates a contact mechanism with a Party through a unique combination (composite primary key) of contactMechId and partyId.
+6. Contact Mechanism Purpose
 * Function: Defines the specific use of a contact mechanism, like billing or shipping.
-* Implementation: Utilizes the ContactMechPurpose entity, linking a contactMechId to a purpose such as BILLING or SHIPPING.
+* Implementation: Utilizes the ContactMechType entity, linking a contactMechTypeId to a purpose such as BILLING or SHIPPING.
 Sample JSON Data
 1. Person as Customer
 ```
