@@ -12,9 +12,16 @@
 
 ### Browse Root Category
 
-**Purpose:** Browse Root Category of a catalog serves as the container category which holds the category tree i.e, all sub categories of type CATALOG_CATEGORY.
-**Description:** Only one Browse Root category can be associated with a catalog as prod catalog category type PCCT_BROWSE_ROOT. Browse Root and all the categories associated with it will have the product category type as CATALOG_CATEGORY.
-**Category Type:** CATALOG_CATEGORY
+
+**Purpose:** 
+* Browse Root Category of a catalog serves as the container category which holds the category tree i.e, all sub categories of type CATALOG_CATEGORY.
+
+**Description:**
+* Only one Browse Root category can be associated with a catalog as prod catalog category type PCCT_BROWSE_ROOT. 
+* Browse Root and all the categories associated with it will have the product category type as CATALOG_CATEGORY.
+
+**Category Type:** 
+* CATALOG_CATEGORY
 
 **API Support**
 Present in class CatalogWorker
@@ -44,14 +51,23 @@ Association of other categories with "BROWSE_ROOT" category
 
 **Additional Notes**
 
-Sequence number in Product Category Rollup depicts the order in which the categories will be displayed on front store.
-A Product Category is either group of products or categories.
-A Product Category should be setup to group only categories or only products not both.
+* Sequence number in Product Category Rollup depicts the order in which the categories will be displayed on front store.
+* A Product Category is either group of products or categories i.e. a Product Category should be setup to group only categories or only products not both.
 
 ### Search Category
-**Purpose:** Search Category provides support to the search functionality of a online catalog. The prod catalog category type for the Search Category is PCCT_SEARCH and only a single Search Category of this type can exist for a catalog. This category will not be associated with Browse Root Category.
-**Description:** The Search Category with prod catalog category type as PCCT_SEARCH is considered as default search category. To enable search directly for a product or for any other categories, we need to associate these categories or products to the Search Category. In case we want to enable the search to show the product variants, then we will be required to set flag prodSearchExcludeVariants to 'N' for ProductStore. Note that only virtual products will be associated (in case of virtual/ variant) with search category and to enable search on variants of virtual products, we will use the above mentioned flag for ProductStore.
-**Category Type:** SEARCH_CATEGORY
+**Purpose:** 
+* Search Category provides support to the search functionality of a online catalog. 
+* The prod catalog category type for the Search Category is PCCT_SEARCH and only a single Search Category of this type can exist for a catalog.
+* This category will not be associated with Browse Root Category.
+
+**Description:** 
+* The Search Category with prod catalog category type as PCCT_SEARCH is considered as default search category. 
+* To enable search directly for a product or for any other categories, we need to associate these categories or products to the Search Category. 
+* In case we want to enable the search to show the product variants, then we will be required to set flag prodSearchExcludeVariants to 'N' for ProductStore. 
+* Note that only virtual products will be associated (in case of virtual/ variant) with search category and to enable search on variants of virtual products, we will use the above mentioned flag for ProductStore.
+
+**Category Type:** 
+* SEARCH_CATEGORY
 
 **API Support**
 TO DO
@@ -68,13 +84,24 @@ Association of products with "CATALOG_SEARCH" category
 <ProductCategoryMember productCategoryId="CATALOG_SEARCH" productId="9001" fromDate="2001-05-13 12:00:00.0"/>
 ```
 **Additional Notes**
-Sequence number in Product Category Member depicts the order in which the products will be displayed on front store.
-**Best practice:** Set the Product Category Members.
+
+* Sequence number in Product Category Member depicts the order in which the products will be displayed on front store.
+
+**Best practice:** 
+* Set the Product Category Members.
 
 ### View Allow Category
-**Purpose:** View Allow is optional and special purpose category for a catalog. If View Allow Category exists for a catalog, then all the products are required to be associated with this category to be visible on front store.
-**Description:** Benefit of using View Allow Category is that you only need to maintain one relationship i.e; associate the categories directly with View Allow Category for web visibility, rather than associating every product to it separately. The prod catalog category type will be PCCT_VIEW_ALLOW for this category.  It has no association with Browse Root.
-**Category Type:** CATALOG_CATEGORY
+**Purpose:** 
+* View Allow is optional and special purpose category for a catalog. 
+* If View Allow Category exists for a catalog, then all the products are required to be associated with this category to be visible on front store.
+
+**Description:** 
+* Benefit of using View Allow Category is that you only need to maintain one relationship i.e. associate the categories directly with View Allow Category for web visibility, rather than associating every product to it separately. 
+* The prod catalog category type will be PCCT_VIEW_ALLOW for this category.  
+* It has no association with Browse Root.
+
+**Category Type:** 
+* CATALOG_CATEGORY
 
 **API Support**
 To Do
@@ -91,14 +118,24 @@ Sample data to demonstrate association of products with "VIEW_ALLOW" category
 ```
 
 **Additional Notes**
-More than one product catalog category types can be assigned to a category.
-Best Practice: Add new category for each catalog category type.
-Best practice: Set the Product Category Members.
+* More than one product catalog category types can be assigned to a category.
+
+**Best Practice** 
+* Add new category for each catalog category type.
+* Set the Product Category Members.
 
 ### Purchase Allow Category
-**Purpose:** Purchase Allow also is an optional and special purpose category for a catalog. Only the products associated to Purchase Allow Category will be available for purchase from store front in the situation if this category exists.
-**Description:** There might be some products onsite which cannot be purchased directly and come under a package or kit. These kind of products are excluded from this category. The prod catalog category type for Purchase Allow Category will be PCCT_PURCHASE_ALLOW.
-**Category Type:** CATALOG_CATEGORY
+**Purpose:** 
+* Purchase Allow also is an optional and special purpose category for a catalog. 
+* Only the products associated to Purchase Allow Category will be available for purchase from store front in the situation if this category exists.
+
+**Description:** 
+* There might be some products onsite which cannot be purchased directly and come under a package or kit. 
+* These kind of products are excluded from this category. 
+* The prod catalog category type for Purchase Allow Category will be PCCT_PURCHASE_ALLOW.
+
+**Category Type:** 
+* CATALOG_CATEGORY
 
 **API Support**
 To Do
@@ -116,14 +153,26 @@ Association of products with "PURCHASE_ALLOW" category
 ```
 **Additional Notes**
 
-More than one product catalog category types can be assigned to a category.
-Best Practice: Add new category for each catalog category type.
-Best Practice: Set the Product Category Members.
+* More than one product catalog category types can be assigned to a category.
+
+**Best Practice**
+* Add new category for each catalog category type.
+* Set the Product Category Members.
 
 ### Tax Category
-Purpose: Tax Category is responsible for applying and calculating tax for all the products belonging to Tax Category. Tax Category need not be associated with Browse Root Category.
-Description: Tax Category can be treated as grouping of products on which you want to apply same tax percent rate. The advantage of this type of categorization for applying tax is that it prevents application of multiple taxes/tax percent rate on single items. Various Tax Categories can be created for a number of product groups if the tax percent applied is different for various product groups. For instance, if you have to setup tax percent for food products as 3.0% and 5.0% for water products for all orders of Utah state, you have to setup two categories for it- "FOOD_TAX_CATEGORY" and "WATER_TAX_CATEGORY". After adding the products to the categories, the categories need to be associated with the tax authority and two different tax rates (3.0% and 5.0%) will be set for them. Now when a user will purchase a product from the storefront, the tax will be calculated based on the tax rate of the category to which the product belongs.
-Category Type: TAX_CATEGORY
+**Purpose**
+* Tax Category is responsible for applying and calculating tax for all the products belonging to Tax Category.
+* Tax Category need not be associated with Browse Root Category.
+  
+**Description**
+* Tax Category can be treated as grouping of products on which you want to apply same tax percent rate.
+* The advantage of this type of categorization for applying tax is that it prevents application of multiple taxes/tax percent rate on single items.
+* Various Tax Categories can be created for a number of product groups if the tax percent applied is different for various product groups. For instance, if you have to setup tax percent for food products as 3.0% and 5.0% for water products for all orders of Utah state, you have to setup two categories for it- "FOOD_TAX_CATEGORY" and "WATER_TAX_CATEGORY".
+* After adding the products to the categories, the categories need to be associated with the tax authority and two different tax rates (3.0% and 5.0%) will be set for them.
+* Now when a user will purchase a product from the storefront, the tax will be calculated based on the tax rate of the category to which the product belongs.
+
+**Category Type** 
+* TAX_CATEGORY
 
 API Support
 To Do
