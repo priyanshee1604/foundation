@@ -12,7 +12,8 @@
 
 ### Browse Root Category
 
-**Purpose:** Browse Root Category of a catalog serves as the container category which holds the category tree i.e, all sub categories of type CATALOG_CATEGORY.
+**Purpose:** 
+* Browse Root Category of a catalog serves as the container category which holds the category tree i.e, all sub categories of type CATALOG_CATEGORY.
 **Description:** Only one Browse Root category can be associated with a catalog as prod catalog category type PCCT_BROWSE_ROOT. Browse Root and all the categories associated with it will have the product category type as CATALOG_CATEGORY.
 **Category Type:** CATALOG_CATEGORY
 
