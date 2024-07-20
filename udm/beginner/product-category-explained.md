@@ -49,8 +49,15 @@ A Product Category is either group of products or categories.
 A Product Category should be setup to group only categories or only products not both.
 
 ### Search Category
-**Purpose:** Search Category provides support to the search functionality of a online catalog. The prod catalog category type for the Search Category is PCCT_SEARCH and only a single Search Category of this type can exist for a catalog. This category will not be associated with Browse Root Category.
-**Description:** The Search Category with prod catalog category type as PCCT_SEARCH is considered as default search category. To enable search directly for a product or for any other categories, we need to associate these categories or products to the Search Category. In case we want to enable the search to show the product variants, then we will be required to set flag prodSearchExcludeVariants to 'N' for ProductStore. Note that only virtual products will be associated (in case of virtual/ variant) with search category and to enable search on variants of virtual products, we will use the above mentioned flag for ProductStore.
+**Purpose:** 
+Search Category provides support to the search functionality of a online catalog. 
+The prod catalog category type for the Search Category is **PCCT_SEARCH** and only a single Search Category of this type can exist for a catalog. 
+This category will not be associated with Browse Root Category.
+**Description:**
+The Search Category with prod catalog category type as PCCT_SEARCH is considered as default search category. 
+To enable search directly for a product or for any other categories, we need to associate these categories or products to the Search Category. 
+In case we want to enable the search to show the product variants, then we will be required to set flag prodSearchExcludeVariants to 'N' for ProductStore. 
+Note that only virtual products will be associated (in case of virtual/ variant) with search category and to enable search on variants of virtual products, we will use the above mentioned flag for ProductStore.
 **Category Type:** SEARCH_CATEGORY
 
 **API Support**
